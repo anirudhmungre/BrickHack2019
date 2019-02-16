@@ -1,0 +1,11 @@
+{
+  "name": "BrickHack2019",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:anirudhmungre/BrickHack2019.git",
+  "author": "<anirudh.mungre16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/vision": "^0.24.0"
+  }
+}
