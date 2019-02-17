@@ -18,5 +18,18 @@ body{
 }
 
 p{
-    background-color: aliceblue;
+    color: mediumaquamarine;
+    font-size: 150%;
+    text-align: center;
+}
+
+.input{
+    font-size: 120%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+    align-content: center;
+}
+.input:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
