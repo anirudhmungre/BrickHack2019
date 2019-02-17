@@ -7,22 +7,53 @@
 		<img class=logo src="logo.png" alt="Alt Eats Logo">
 		<title>Alt Eats</title>
 		<script>
-			axios.post('/upload', {
-				upload: document.getElementById("#upload")
-			})
-				.then(function (response) {
-					console.log(response);
+			function iNeedAFunction(){
+				axios.post('/upload', {
+					upload: document.getElementById("#upload")
 				})
+					.then(function (response) {
+						console.log(response);
+						
+						var result = "<table border=1>";
+						for(var i = 0; i < response.length; i++){
+							result += "<tr>";
+							for(var j = 0; j < response[i].length; j++){
+								result += "<td>" + response[i][j] + "</td>";
+								
+							}
+							result += "</tr>";
+						}
+						result += "</table>";
+						return result;
+					})
+			}
 		</script>
 	</head>
 	
 	<body>
 	<h1> Alt Eats </h1>
 		<p>Scan your item and find out where you can get it!</p>
-		<form action="submit.html">
+		<form onsubmit="iNeedAFunction()">
 			<input type="file" id="upload" accept="image/*">
 			<input type="submit">
 		</form>
+	
+	
+		<table>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+		</table>
+	
 	
 	</body>
 
