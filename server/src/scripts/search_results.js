@@ -25,7 +25,7 @@ const search_results = async (img_name) => {
     json.results.forEach(result => {
         items[result.sku] = result.name
     })
-    // console.log(items)
+    console.log(items)
     return items
 }
 

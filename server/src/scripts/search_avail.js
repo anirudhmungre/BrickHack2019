@@ -14,7 +14,7 @@ const params = {
     "api-version" : "2018-10-18"
 }
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.post('/upload', (req, res) => {
     const container = async (img_name) => {
@@ -71,10 +71,11 @@ app.post('/upload', (req, res) => {
             let image = await get_images(item_info[i][0])
             item_info[i].push(image)
         }
+        // console.log(item_info)
         console.timeEnd("runtime")
         return item_info
     }
-    container(req.body.upload.name)
+    container("oranges")
 })
 
 

@@ -8,36 +8,45 @@
 	<img class=logo src="logo.png" alt="Alt Eats Logo">
 	<title>Alt Eats</title>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="127.0.0.1:8080/server/src/scripts/search_avail"></script>
 
 	<script>
-		function iNeedAFunction() {
-			axios.post('/upload', {
-				upload: document.getElementById("#upload")
-			})
-				.then(function (response) {
-					console.log(response);
+		// import search_avail from '../../server/src/scripts/search_avail'
+		// function iNeedAFunction() {
+		// 	axios.post('localhost:8080/upload', {
+		// 		upload: document.getElementById("#upload")
+		// 	})
+		// 		.then(function (response) {
+		// 			console.log(response);
+		// 			// let response = search_avail.container()
+		// 			// console.log(response)
 
-					var result = "<table border=1>";
-					for (var i = 0; i < response.length; i++) {
-						if(i == 0){
-							result += "<tr>" + "Item Name" + "</tr>";
-						}else if(i == 1){
-							result += "<tr>" + "Location ID" + "</tr>";
-						}else if(i == 2){
-							result += "<tr>" + "Price" + "</tr>";
-						}else{
-							result += "<tr>" + "Image" + "</tr>";
-						}
+		// 			var result = "<table border=1>";
+		// 			for (var i = 0; i < response.length; i++) {
+		// 				if(i == 0){
+		// 					result += "<tr>" + "Item Name" + "</tr>";
+		// 				}else if(i == 1){
+		// 					result += "<tr>" + "Location ID" + "</tr>";
+		// 				}else if(i == 2){
+		// 					result += "<tr>" + "Price" + "</tr>";
+		// 				}else{
+		// 					result += "<tr>" + "Image" + "</tr>";
+		// 				}
 
-						for (var j = 0; j < response[i].length; j++) {
-							result += "<td>" + response[i][j] + "</td>";
-
-						}
-					}
-					result += "</table>";
-					return result;
-				})
-		}
+		// 				for (var j = 0; j < response[i].length; j++) {
+		// 					result += "<td>" + response[i][j] + "</td>";
+		// 				}
+		// 			}
+		// 			result += "</table>";
+		// 			document.getElementById('#table').innerHTML =  result;
+		// 		}
+		//  }
+		 function hideTable(){
+			var x = document.getElementById("table");
+			if (x.style.display === "none") {
+				x.style.display = "inline";
+			}
+		 }
 	</script>
 </head>
 
@@ -48,10 +57,37 @@
 			<input type="file" id="upload" accept="image/*">
 			<input type="submit">
 		</form> -->
-	<form id="uploadProfilePicForm" enctype="multipart/form-data" onsubmit="iNeedAFunction()" method="post">
-		<input type="file" multiple="multiple" id="upload" name="userPhoto" accept="image/*" />
-		<input type="submit" name="submit" value="Upload">
+	<form id="uploadProfilePicForm" enctype="multipart/form-data" >
+		<input type="file" multiple="multiple" id="upload" name="userPhoto" accept="image/*" required/>
+		<input type="button" name="submit" value="Upload" onclick="hideTable()">
 	</form>
+
+	
+	<div id="table" style="display: none;">
+		<p>Items similar to your image:</p>
+		<table>
+			<td><strong>Image</strong></td>
+			<td><strong>Item Name</strong></td>
+			<td><strong>Price</strong></td>
+			<td><strong>Location</strong></td>
+			<tr>
+				<td>
+					<img src="https://www.wegmans.com/content/dam/wegmans/products/373/46373.jpg" style="width:200px;height:200px;">
+				</td>
+				<td>California Naval Oranges</td>
+				<td>$3.99</td>
+				<td>650 Hylan Drive</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="https://www.wegmans.com/content/dam/wegmans/products/601/82601.jpg" style="width:200px;height:200px;">
+				</td>
+				<td>Clementine Oranges</td>
+				<td>$5.99</td>
+				<td>650 Hylan Drive</td>
+			</tr>		
+		</table>
+	</div>
 
 </body>
 

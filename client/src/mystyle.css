@@ -2,7 +2,7 @@ h1{
     font-family: 'Cookie', cursive;
     text-align: center;
     font-size: 100px;
-    //text-shadow: 2px 2px 2px #aaa;
+    text-shadow: 2px 2px 2px #aaa;
 }
 
 .logo{
@@ -42,4 +42,9 @@ div{
 
 #foodItems{
 	font-family: "Cookie", capitalize;
+}
+
+#table{
+    margin-left:0px;
+    display: none;
 }
