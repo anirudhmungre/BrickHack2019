@@ -40,6 +40,10 @@ div{
 	margin-left: 110px;
 }
 
+.submit{
+    margin-top: 5%;
+}
+
 #foodItems{
 	font-family: "Cookie", capitalize;
 }
