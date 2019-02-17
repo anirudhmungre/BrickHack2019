@@ -6,13 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<img class=logo src="logo.png" alt="Alt Eats Logo">
 		<title>Alt Eats</title>
+		<script>
+			axios.post('/upload', {
+				upload: document.getElementById("#upload")
+			})
+				.then(function (response) {
+					console.log(response);
+				})
+		</script>
 	</head>
 	
 	<body>
 	<h1> Alt Eats </h1>
 		<p>Scan your item and find out where you can get it!</p>
 		<form action="submit.html">
-			<input type="file" name="pic" accept="image/*">
+			<input type="file" id="upload" accept="image/*">
 			<input type="submit">
 		</form>
 	
