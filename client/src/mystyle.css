@@ -23,8 +23,16 @@ p{
 	text-align: center;
 }
 
-.form,input:hover{
-	cursor: pointer;
+.form,input
+{
+    font-size: 120%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+.form,input:hover {
+  cursor: pointer;
 }
 
 div{
