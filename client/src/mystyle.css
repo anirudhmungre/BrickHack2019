@@ -23,13 +23,19 @@ p{
     text-align: center;
 }
 
-.input{
+.form,input
+{
     font-size: 120%;
     -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-    align-content: center;
+    transition-duration: 0.4s;
+    display: inline-block;
 }
-.input:hover {
-  background-color: #4CAF50; /* Green */
-  color: white;
+
+.form,input:hover {
+  cursor: pointer;
+}
+
+div{
+    text-align: center;
+    margin-left: 110px;
 }
