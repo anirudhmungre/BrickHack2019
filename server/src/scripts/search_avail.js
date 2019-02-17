@@ -63,8 +63,8 @@ const container = async (img_name) => {
         let image = await get_images(item_info[i][0])
         item_info[i].push(image)
     }
-    console.log(item_info)
     console.timeEnd("runtime")
+    return item_info
 }
 
 exports.container = container
