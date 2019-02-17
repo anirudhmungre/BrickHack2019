@@ -1,6 +1,6 @@
 "use strict"
 
-const search_items = async (imageName) => {
+const search_terms = async (imageName) => {
     let items = [];
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
@@ -12,8 +12,8 @@ const search_items = async (imageName) => {
     const [result] = await client.labelDetection('../resources/' + imageName + '.jpg');
     const labels = result.labelAnnotations;
     labels.forEach(label => items.push(label.description));
-    console.log(items);
-    return items;
+    items.length = 1
+    return items
 }
 
-exports.search_items = search_items
+exports.search_terms = search_terms
