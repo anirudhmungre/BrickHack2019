@@ -1,20 +1,39 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<img class=logo src="logo.png" alt="Alt Eats Logo">
 		<title>Alt Eats</title>
+		<script> 
+			function makeTable(){
+				var item = document.getElementById("foodItems").innerHTML = "Stuff";
+			}
+		</script>
 	</head>
-	
-	<body>
-	<h1> Alt Eats </h1>
-		<p>Scan your item and find out where you can get it!</p>
-		<form action="C:\Users\Kelse\git\BrickHack2019\client\src\homepage.html">
-			<input type="file" name="pic" accept="image/*">
-			<input type="submit">
-		</form>
-	
-	</body>
 
+	<body>
+		<h1> Alt Eats </h1>
+		<p>Here is where you can find this item:</p>
+		
+		
+		<div id="foodItems">
+			<table >
+				<tr>
+					<th>Image</th>
+					<th>Food Items</th>
+					<th>Price</th>
+					<th>Location</th>
+				</tr>
+				<tr>
+					<td>the</td>
+					<td>table</td>
+					<td>is</td>
+					<td>working</td>
+				</tr>
+				
+			</table>
+		</div>
+	</body>
 </html>
