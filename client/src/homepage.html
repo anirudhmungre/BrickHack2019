@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-        <img class=logo src="logo.png" alt="Alt Eats Logo">
-        <title>Alt Eats</title>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<img class=logo src="logo.png" alt="Alt Eats Logo">
+		<title>Alt Eats</title>
+		<script> 
+			function makeTable(){
+				var item = document.getElementById("foodItems").innerHTML = "Stuff";
+			}
+		</script>
+	</head>
 
-    </head>
-    <body>        
-        <h1> Alt Eats </h1>
-        <p>Scan your item and find out where you can get it!</p>
-        <div>
-            <form>
-                <input class="input" type="file" accept="image/*">
-            </form>
-        </div>
-    </body>
+	<body>
+		<h1> Alt Eats </h1>
+		<p>Here is where you can find this item:</p>
+		
+		
+		<div id="foodItems">
+			<table >
+				<tr>
+					<th>Image</th>
+					<th>Food Items</th>
+					<th>Price</th>
+					<th>Location</th>
+				</tr>
+				<tr>
+					<td>the</td>
+					<td>table</td>
+					<td>is</td>
+					<td>working</td>
+				</tr>
+				
+			</table>
+		</div>
+	</body>
 </html>

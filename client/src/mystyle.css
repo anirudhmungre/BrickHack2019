@@ -1,7 +1,7 @@
 h1{
     font-family: 'Cookie', cursive;
     text-align: center;
-     font-size: 100px;
+    font-size: 100px;
     //text-shadow: 2px 2px 2px #aaa;
 }
 
@@ -18,24 +18,20 @@ body{
 }
 
 p{
-    color: mediumaquamarine;
-    font-size: 150%;
-    text-align: center;
+    background-color: aliceblue;
+	font-size: 150%;
+	text-align: center;
 }
 
-.form,input
-{
-    font-size: 120%;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    display: inline-block;
-}
-
-.form,input:hover {
-  cursor: pointer;
+.form,input:hover{
+	cursor: pointer;
 }
 
 div{
-    text-align: center;
-    margin-left: 110px;
+	text-align: center;
+	margin-left: 110px;
+}
+
+#foodItems{
+	font-family: "Cookie", capitalize;
 }
