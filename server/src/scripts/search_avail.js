@@ -2,6 +2,7 @@
 console.time("runtime")
 const express = require('express')
 const app = express()
+const multer = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 
@@ -12,7 +13,10 @@ const params = {
     "Subscription-Key": "c59dd53a607f42ae830de7469a83a985",
     "api-version" : "2018-10-18"
 }
-app.post('/upload', upload.array('file', 12), (req, res) => {
+
+app.use(bodyParser.json());
+
+app.post('/upload', (req, res) => {
     const container = async (img_name) => {
         const avail_locations = async (sku) => {
             let url = new URL(`https://api.wegmans.io/products/${sku}/availabilities`)
@@ -70,8 +74,8 @@ app.post('/upload', upload.array('file', 12), (req, res) => {
         console.timeEnd("runtime")
         return item_info
     }
-    container(req.body.upload)
+    container(req.body.upload.name)
 })
 
 
-exports.container = container
+// exports.container = container
