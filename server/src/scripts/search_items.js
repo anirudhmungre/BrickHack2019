@@ -12,7 +12,7 @@ const search_items = async (imageName) => {
     const [result] = await client.labelDetection('../resources/' + imageName + '.jpg');
     const labels = result.labelAnnotations;
     labels.forEach(label => items.push(label.description));
-    console.log(items);
+    // console.log(items);
     return items;
 }
 
