@@ -1,0 +1,22 @@
+h1{
+    font-family: 'Cookie', cursive;
+    text-align: center;
+     font-size: 100px;
+    //text-shadow: 2px 2px 2px #aaa;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-image: url(background.jpg);
+}
+
+p{
+    background-color: aliceblue;
+}
